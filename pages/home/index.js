@@ -74,6 +74,14 @@ Page({
       content,
     });
   },
+
+  goPostDetail(event) {
+    const { id } = event.detail;
+    wx.navigateTo({
+      url: `/pages/postDetail/index?id=${id}`,
+    });
+  },
+
   goRelease() {
     wx.navigateTo({
       url: '/pages/release/index',

@@ -17,10 +17,12 @@
             />
             <card
               wx:for="{{cardInfo}}"
-              wx:key="index"
+              wx:key="id"
+              postId="{{item.id}}"
               desc="{{item.desc}}"
               url="{{item.url}}"
               tags="{{item.tags}}"
+              bind:cardtap="goPostDetail"
             />
           </view>
         </t-pull-down-refresh>
@@ -29,10 +31,12 @@
         <view class="home-card-list">
           <card
             wx:for="{{focusCardInfo}}"
-            wx:key="index"
+            wx:key="id"
+            postId="{{item.id}}"
             desc="{{item.desc}}"
             url="{{item.url}}"
             tags="{{item.tags}}"
+            bind:cardtap="goPostDetail"
           />
         </view>
       </t-tab-panel>

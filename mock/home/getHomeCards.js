@@ -5,73 +5,48 @@ export default {
     message: '请求成功',
     data: [
       {
+        id: '1',
         url: '/static/home/card0.png',
-        desc: '少年,星空与梦想',
+        desc: '温柔通勤风｜米白针织 + 卡其半裙',
         tags: [
-          {
-            text: 'AI绘画',
-            theme: 'primary',
-          },
-          {
-            text: '版权素材',
-            theme: 'success',
-          },
+          { text: '通勤', theme: 'primary' },
+          { text: '春季', theme: 'success' },
         ],
       },
       {
+        id: '2',
         url: '/static/home/card1.png',
-        desc: '仰望星空的少女',
+        desc: '校园元气感｜卫衣 + 百褶裙轻松出门',
         tags: [
-          {
-            text: 'AI绘画',
-            theme: 'primary',
-          },
-          {
-            text: '版权素材',
-            theme: 'success',
-          },
+          { text: '校园', theme: 'primary' },
+          { text: '休闲', theme: 'success' },
         ],
       },
       {
+        id: '3',
         url: '/static/home/card3.png',
-        desc: '仰望星空的少年',
+        desc: '夜晚氛围感｜深色系穿搭也能很有层次',
         tags: [
-          {
-            text: 'AI绘画',
-            theme: 'primary',
-          },
-          {
-            text: '版权素材',
-            theme: 'success',
-          },
+          { text: '夜景', theme: 'primary' },
+          { text: '约会', theme: 'success' },
         ],
       },
       {
+        id: '4',
         url: '/static/home/card2.png',
-        desc: '少年,星空与梦想',
+        desc: '周末出游｜轻户外舒适穿搭示范',
         tags: [
-          {
-            text: 'AI绘画',
-            theme: 'primary',
-          },
-          {
-            text: '版权素材',
-            theme: 'success',
-          },
+          { text: '出游', theme: 'primary' },
+          { text: '舒适', theme: 'success' },
         ],
       },
       {
+        id: '5',
         url: '/static/home/card4.png',
-        desc: '多彩的天空',
+        desc: '彩色系穿搭｜让整体一眼更有记忆点',
         tags: [
-          {
-            text: 'AI绘画',
-            theme: 'primary',
-          },
-          {
-            text: '版权素材',
-            theme: 'success',
-          },
+          { text: '彩色系', theme: 'primary' },
+          { text: '春夏', theme: 'success' },
         ],
       },
     ],

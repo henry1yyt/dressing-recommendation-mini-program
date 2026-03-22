@@ -71,6 +71,14 @@
         "index"
       ]
     }
+,
+    {
+      "root": "pages/postDetail",
+      "name": "postDetail",
+      "pages": [
+        "index"
+      ]
+    }
   ],
   "window": {
     "backgroundTextStyle": "light",

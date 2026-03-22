@@ -1,0 +1,44 @@
+<template name="postDetailTemplate">
+  <view class="post-detail">
+    <image class="post-detail__cover" src="{{post.cover}}" mode="aspectFill" />
+
+    <view class="post-detail__body">
+      <view class="post-detail__header">
+        <text class="post-detail__title">{{post.title}}</text>
+        <text class="post-detail__summary">{{post.summary}}</text>
+      </view>
+
+      <view class="post-detail__author-card">
+        <image class="post-detail__avatar" src="{{post.avatar}}" mode="aspectFill" />
+        <view class="post-detail__author-meta">
+          <text class="post-detail__author">{{post.author}}</text>
+          <text class="post-detail__time">{{post.publishTime}}</text>
+        </view>
+      </view>
+
+      <view class="post-detail__tag-group">
+        <t-tag wx:for="{{post.tags}}" wx:key="index" size="medium" variant="light" theme="{{item.theme}}">{{item.text}}</t-tag>
+      </view>
+
+      <view class="post-detail__stats">
+        <view class="post-detail__stat-item">点赞 {{post.stats.likes}}</view>
+        <view class="post-detail__stat-item">评论 {{post.stats.comments}}</view>
+        <view class="post-detail__stat-item">收藏 {{post.stats.collects}}</view>
+      </view>
+
+      <view class="post-detail__section" wx:for="{{post.sections}}" wx:key="index">
+        <text class="post-detail__section-title">{{item.title}}</text>
+        <text wx:if="{{item.type === 'text'}}" class="post-detail__paragraph">{{item.content}}</text>
+        <image wx:if="{{item.type === 'image'}}" class="post-detail__content-image" src="{{item.src}}" mode="widthFix" />
+      </view>
+
+      <view class="post-detail__comments">
+        <text class="post-detail__comments-title">评论区（演示数据）</text>
+        <view class="post-detail__comment-item" wx:for="{{post.comments}}" wx:key="index">
+          <text class="post-detail__comment-user">{{item.user}}</text>
+          <text class="post-detail__comment-content">{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

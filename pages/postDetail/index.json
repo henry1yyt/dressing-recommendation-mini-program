@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "帖子详情",
+  "usingComponents": {
+    "t-tag": "tdesign-miniprogram/tag/tag"
+  }
+}

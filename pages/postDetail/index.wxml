@@ -1,0 +1,2 @@
+<import src="/templates/post-detail/index.wxml" />
+<template is="postDetailTemplate" data="{{ post: post }}" />

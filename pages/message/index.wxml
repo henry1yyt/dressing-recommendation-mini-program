@@ -1,6 +1,10 @@
 <wxs src="./index.wxs" module="utils" />
 
 <nav nav-type="title" title-text="全部消息"></nav>
+<view class="ai-entry" bindtap="toAIChat">
+  <text class="ai-entry__title">AI 穿搭助手</text>
+  <text class="ai-entry__desc">支持切换 GLM-4.7-Flash / SiliconFlow Qwen3.5-4B / OpenRouter Free</text>
+</view>
 <scroll-view
   class="message-list"
   scroll-y

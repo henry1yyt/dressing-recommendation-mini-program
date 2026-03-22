@@ -38,6 +38,11 @@ Component({
         isSidebar: false,
       },
       {
+        title: 'AI 穿搭助手页',
+        url: 'pages/aiChat/index',
+        isSidebar: false,
+      },
+      {
         title: '个人中心页',
         url: 'pages/my/index',
         isSidebar: true,

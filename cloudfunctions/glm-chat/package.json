@@ -1,0 +1,9 @@
+{
+  "name": "glm-chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "wx-server-sdk": "latest"
+  }
+}

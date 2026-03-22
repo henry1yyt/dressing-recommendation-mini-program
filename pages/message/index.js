@@ -87,12 +87,16 @@ Page({
   /** 打开对话页 */
   toChat(event) {
     const { userId } = event.currentTarget.dataset;
-    wx.navigateTo({ url: `/pages/chat/index?userId${userId}` }).then(({ eventChannel }) => {
+    wx.navigateTo({ url: `/pages/chat/index?userId=${userId}` }).then(({ eventChannel }) => {
       currentUser = { userId, eventChannel };
       const { user } = this.getUserById(userId);
       eventChannel.emit('update', user);
     });
     this.setMessagesRead(userId);
+  },
+
+  toAIChat() {
+    wx.navigateTo({ url: '/pages/aiChat/index' });
   },
 
   /** 将用户的所有消息标记为已读 */

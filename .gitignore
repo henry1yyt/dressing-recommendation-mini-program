@@ -109,3 +109,8 @@ miniprogram_npm
 .idea
 
 project.private.config.json
+# AI cloud function local secrets
+cloudfunctions/glm-chat/local.config.js
+
+# AI local secrets
+config/ai.local.js

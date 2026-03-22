@@ -1,0 +1,68 @@
+<t-navbar title="AI 穿搭助手" left-arrow />
+
+<view class="ai-chat-page">
+  <view class="toolbar">
+  <picker
+    mode="selector"
+    range="{{ modelLabels }}"
+    value="{{ selectedModelIndex }}"
+    bindchange="handleModelChange"
+  >
+    <view class="picker-trigger">
+      <text class="picker-label">当前模型</text>
+      <text class="picker-value">{{ currentModelLabel }}</text>
+    </view>
+  </picker>
+
+  <t-button
+    size="small"
+    theme="default"
+    variant="outline"
+    bindtap="startNewChat"
+  >
+    新对话
+  </t-button>
+</view>
+
+  <scroll-view class="message-scroll" scroll-y scroll-into-view="{{ anchorId }}">
+    <view class="message-list">
+      <block wx:for="{{ messages }}" wx:key="id">
+        <view class="message-row {{ item.role === 'user' ? 'message-row--user' : 'message-row--assistant' }}">
+          <view class="avatar {{ item.role === 'user' ? 'avatar--user' : 'avatar--assistant' }}">
+            {{ item.role === 'user' ? '我' : 'AI' }}
+          </view>
+          <view class="bubble {{ item.role === 'user' ? 'bubble--user' : 'bubble--assistant' }} {{ item.error ? 'bubble--error' : '' }}">
+            <text selectable="true" space="ensp">{{ item.content }}</text>
+            <view wx:if="{{ item.loading }}" class="bubble-loading">
+              <t-loading theme="spinner" size="36rpx" />
+              <text class="bubble-loading__text">请稍候…</text>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view id="bottom" />
+    </view>
+  </scroll-view>
+
+  <view class="composer-placeholder" />
+  <view class="composer" style="bottom: {{ keyboardHeight }}px;">
+    <textarea
+      class="composer__textarea"
+      value="{{ inputValue }}"
+      maxlength="-1"
+      auto-height
+      placeholder="问我穿搭问题，例如：春天通勤怎么穿得干净利落？"
+      placeholder-class="composer__placeholder"
+      adjust-position="{{ false }}"
+      hold-keyboard="{{ true }}"
+      cursor-spacing="24"
+      show-confirm-bar="{{ false }}"
+      bindkeyboardheightchange="handleKeyboardHeightChange"
+      bindblur="handleBlur"
+      bindinput="handleInput"
+    />
+    <t-button theme="primary" size="large" loading="{{ loading }}" disabled="{{ !inputValue || loading }}" bindtap="handleSend">
+      发送
+    </t-button>
+  </view>
+</view>

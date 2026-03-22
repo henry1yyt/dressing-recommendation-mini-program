@@ -28,6 +28,17 @@ App({
       });
     });
 
+    if (wx.cloud) {
+      try {
+        wx.cloud.init({
+          env: wx.cloud.DYNAMIC_CURRENT_ENV,
+          traceUser: true,
+        });
+      } catch (error) {
+        console.warn('云开发初始化失败', error);
+      }
+    }
+
     this.getUnreadNum();
     this.connect();
   },

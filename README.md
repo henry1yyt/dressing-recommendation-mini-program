@@ -68,3 +68,26 @@ npm install
 ## 开源协议
 
 TDesign 遵循 [MIT 协议](https://github.com/TDesignOteam/tdesign-miniprogram-starter/blob/main/LICENSE)。
+
+## AI 穿搭助手（支持模型切换，本地测试版）
+
+项目新增了一个 AI 对话页，当前改为**本地测试模式**：小程序前端直接请求第三方模型接口，不再依赖微信云函数。
+
+### 当前支持的模型
+
+- 智谱：`glm-4.7-flash`
+- 硅基流动：`Qwen/Qwen3.5-4B`
+- OpenRouter：`openrouter/free`
+
+### 本地测试使用步骤
+
+1. 打开 `config/ai.local.js`
+2. 填入对应平台的 API Key
+3. 在微信开发者工具里勾选：**不校验合法域名、web-view（业务域名）、TLS 版本以及 HTTPS 证书**
+4. 重新编译后，进入小程序 `我的 -> AI 穿搭助手` 或 `消息页顶部入口` 使用
+
+### 说明
+
+- `config/ai.local.js` 已加入 `.gitignore`，避免误提交
+- 这个版本只适合本地联调测试，不建议正式发布
+- 如果某个平台模型名和你后台看到的不一致，请以平台控制台展示的实际模型 ID 为准

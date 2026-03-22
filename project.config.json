@@ -101,6 +101,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "aiChat",
+          "pathName": "pages/aiChat/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
@@ -109,5 +116,6 @@
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "simulatorPluginLibVersion": {}
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionRoot": "cloudfunctions"
 }

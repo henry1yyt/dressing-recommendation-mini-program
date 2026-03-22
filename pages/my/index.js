@@ -36,6 +36,7 @@ Page({
     ],
 
     settingList: [
+      { name: 'AI 穿搭助手', icon: 'chat', type: 'ai-chat', url: '/pages/aiChat/index' },
       { name: '联系客服', icon: 'service', type: 'service' },
       { name: '设置', icon: 'setting', type: 'setting', url: '/pages/setting/index' },
     ],
